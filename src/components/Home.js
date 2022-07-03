@@ -12,9 +12,6 @@ import Footer from './footer';
 function Home(){
   return(
     <div>
-            <Header/>
-
-<SideMenu />
 
         <CategoryCarousel />
         
