@@ -1,9 +1,35 @@
 import React from 'react';
+import Blog from './Blog';
+import FeaturedProducts from './FeaturedProducts';
+import MiddleBanner from './MiddleBanner';
+import CategoryCarousel from './CategoryCarousel';
+import ProductPad from './ProductPad';
+import SideMenu from './SideMenu';
+import Header from './Header';
+import Footer from './footer';
 
-class Home extends React.Component {
-    render() {
-      return <h1>Hello,</h1>;
-    }
-  }
+
+function Home(){
+  return(
+    <div>
+            <Header/>
+
+<SideMenu />
+
+        <CategoryCarousel />
+        
+        <FeaturedProducts />
+                
+        <MiddleBanner />
+               
+        <ProductPad />
+              
+        <Blog />
+
+        <Footer/>
+    </div>
+
+  )
+}
 
 export default Home;
