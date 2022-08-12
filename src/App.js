@@ -15,39 +15,62 @@ import routes from './routes';
 
 
 
-class App extends React.Component {
+class App extends Component {
   
   render() {
-   
+
+    // const routeComponets = routes.map((route, idx) => {
+    //   return route.component ? (
+    //     <Route
+    //     key={idx}
+    //     path={route.path}
+    //     name={route.name}
+    //     element={route.component} />
+    //   ) : (null);
+    // })
+
+    const getRoutes = (routes) =>
+    routes.map((route) => {
+      if (route.collapse) {
+        return getRoutes(route.collapse);
+      }
+
+      if (route.path) {
+        return <Route exact path={route.path} element={route.component} key={route.key} />;
+      }
+
+      return null;
+    });
     return (
         
  <div className="MainDiv">
-     
-     
-
-
 <Header/>
 
 <SideMenu />
 
 <BrowserRouter>
 <Routes>
+<Route path="/meat" element={<CategoryDetails id="1"/>}/>
+{getRoutes(routes)}
+</Routes>
+
+{/* <Routes>
   <Route path="/" element={<Home />}/>
   <Route path="/vegetables" element={<CategoryDetails id="2"/>}/>
   <Route path="/meat" element={<CategoryDetails id="1"/>}/>
     
-  {/* {routes.map((route, idx) => {
+  {routes.map((route, idx) => {
                     return route.component ? (
                       <Route
                         key={idx}
                         path={route.path}
-                        exact={route.exact}
                         name={route.name}
-                        render={props => <DefaultLayout {...props} uid={this.props.uid}/>} />
+                        element={<CategoryDetails id={route.id}/>} />
                     ) : (null);
-                  })} */}
+                  })}
 
-</Routes>
+</Routes> */}
+
 </BrowserRouter>
 
 </div> 

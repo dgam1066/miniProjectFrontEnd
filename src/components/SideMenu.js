@@ -11,15 +11,12 @@ function SideMenu(){
                     <ul>
                         <li><a href="/meat">Fresh Meat</a></li>
                         <li><a href="/vegetables">Vegetables</a></li>
-                        <li><a href="#">Fruit & Nut Gifts</a></li>
-                        <li><a href="#">Fresh Berries</a></li>
-                        <li><a href="#">Ocean Foods</a></li>
-                        <li><a href="#">Butter & Eggs</a></li>
-                        <li><a href="#">Fastfood</a></li>
-                        <li><a href="#">Fresh Onion</a></li>
-                        <li><a href="#">Papayaya & Crisps</a></li>
-                        <li><a href="#">Oatmeal</a></li>
-                        <li><a href="#">Fresh Bananas</a></li>
+                        <li><a href="/fruits">Fruit & Nut Gifts</a></li>
+                        <li><a href="/pharmacy">Pharmacy</a></li>
+                        <li><a href="/dairy">Dairy Products</a></li>
+                        <li><a href="/household">Household</a></li>
+                        <li><a href="/fastfood">Fastfood</a></li>
+                        <li><a href="/bakery">Bakery</a></li>
                     </ul>
                 </div>
             </div>
